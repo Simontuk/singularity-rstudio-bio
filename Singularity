@@ -19,5 +19,4 @@ From: Simontuk/singularity-rstudio
 
 %post
   Rscript -e "install.packages(c('devtools','tidyverse','ape','cowplot','Seurat','reticulate'))"
-  Rscript -e "devtools::install_github(c('satijalab/Seurat')"
   
