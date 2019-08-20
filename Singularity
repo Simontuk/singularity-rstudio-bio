@@ -18,13 +18,6 @@ From: Simontuk/singularity-rstudio
   export PATH=/usr/lib/rstudio-server/bin:${PATH}
 
 %post
-  yum update
-
-  Rscript -e "install.packages(c('devtools','tidyverse','ape','Seurat'))"
-  Rscript -e "devtools::install_github(c('satijalab/Seurat',
-                                            'immunogenomics/presto',
-                                            'jokergoo/ComplexHeatmap',
-                                            'hhoeflin/hdf5r'))"
+  Rscript -e "install.packages(c('devtools','tidyverse','ape','cowplot','Seurat'))"
+  Rscript -e "devtools::install_github(c('satijalab/Seurat','immunogenomics/presto','jokergoo/ComplexHeatmap','hhoeflin/hdf5r'))"
   
-  #Cleanup yum
-  yum clean all
