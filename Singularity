@@ -18,6 +18,6 @@ From: Simontuk/singularity-rstudio
   export PATH=/usr/lib/rstudio-server/bin:${PATH}
 
 %post
-  Rscript -e "install.packages(c('devtools','tidyverse','ape','cowplot','Seurat'))"
+  Rscript -e "install.packages(c('devtools','tidyverse','ape','cowplot','Seurat','reticulate'))"
   Rscript -e "devtools::install_github(c('satijalab/Seurat','immunogenomics/presto','jokergoo/ComplexHeatmap','hhoeflin/hdf5r'))"
   
